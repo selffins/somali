@@ -15,54 +15,54 @@ LEXICON Noun
 +N+:0   NStem;
 
 LEXICON NStem
-daar	NSuffix	;
-gees	NSuffix	;
-laf	    NSuffix	;
-lug     NSuffix	;
-naag	NSuffix	;
-tib	    NSuffix	;
-sab	    NSuffix	;
-bad	    NSuffix	;
-Jid    NSuffix	;
-feeɖ	NSuffix	;
-ʕiir	NSuffix	;
-ʔul	    NSuffix	;
-bil	    NSuffix	;
-meel	NSuffix	;
-najl	NSuffix	;
-sum	    NSuffix	;
-laam	NSuffix	;
-sim	    NSuffix	;
-dan	    NSuffix	;
-daan	NSuffix	;
-saan	NSuffix	;
-nirig	NSuffix	;
-gaβaɖ	NSuffix	;
-hoɣol	NSuffix	;
-baɣal	NSuffix	;
-waHar   NSuffix	;
-irbad	NSuffix	;
-kefed	NSuffix	;
+Jið     NSuffix	;
 Jilin   NSuffix	;
+bað	    NSuffix	;
+baɣal	NSuffix	;
+bil	    NSuffix	;
 bohol	NSuffix	;
-jirid	NSuffix	;
-ʔaajad	NSuffix	;
-kaliil  NSuffix;
+daan	NSuffix	;
+daar	NSuffix	;
+dan	    NSuffix	;
+feeʐ	NSuffix	;
 gaʕam	NSuffix	;
+gaβaɖ	NSuffix	;
+gees	NSuffix	;
+hoɣol	NSuffix	;
+irbað	NSuffix	;
+jirid	NSuffix	;
+kaliil  NSuffix;
+kefeð	NSuffix	;
+laam	NSuffix	;
+laf	    NSuffix	;
+luɣ     NSuffix	;
+meel	NSuffix	;
+naaɣ	NSuffix	;
+najl	NSuffix	;
+niriɣ	NSuffix	;
+saan	NSuffix	;
+saβ	    NSuffix	;
+sim	    NSuffix	;
+sum	    NSuffix	;
+tiβ	    NSuffix	;
+waHar   NSuffix	;
+ʔaajað	NSuffix	;
 ʔinan	NSuffix	;
+ʔul	    NSuffix	;
+ʕiir	NSuffix	;
 
 LEXICON NSuffix
-+Sg:^       #   ;
-+Sg.Def:^ta #   ;
-+Pl:^o      #   ;
++Sg:0       #   ;
++Sg.Def:ta #   ;
++Pl:o      #   ;
 
 LEXICON Verb
 +V+:0    VStem    ;
 
 LEXICON VStem
-sug     VSuffix;
-kab     VSuffix;
-sid     VSuffix;
+suɣ     VSuffix;
+kaβ     VSuffix;
+sið     VSuffix;
 dil     VSuffix;
 gan     VSuffix;
 tum     VSuffix;
@@ -72,6 +72,6 @@ qosol   VSuffix;
 haðal   VSuffix;
 
 LEXICON VSuffix
-+3Sg.Masc:^aj    #;
-+3Sg.Fem:^taj    #;
-+1Pl.Past:^naj   #;
++3Sg.Masc:aj    #;
++3Sg.Fem:taj    #;
++1Pl.Past:naj   #;
