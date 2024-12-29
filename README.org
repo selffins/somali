@@ -1,0 +1,297 @@
+* Files
+
+** `README.org`
+Files, usage, comments, list of underlying forms for roots, suffixes, and words; and conclusion.
+
+** `somali.lexc`
+Generates the words with morpheme boundaries (before applying the FST.)
+
+** `somali.xfst`
+The FST. Analyzes the surface forms, and generates the vocabulary.
+
+** `surface.txt`
+The surface forms of the given data.
+
+** `analyzed.txt`
+The output of the top-down application of the FST to `surface.txt`.
+
+* Usage
+
+To use, type ````foma -l somali.xfst``` in terminal. It applies the .xfst to `surface.txt` and generates a file `analyzed.txt`.
+
+* Comments
+
+** General
+
+Replaced d͡ʒ with J and h̵ with H for convenience.
+We use morpheme boundaries "^", which we cleanup in the end.
+
+** `.lexc` and `.xfst`
+
+The roots for the nouns is largely the same as the +Sg surface forms. We hypothesize however, that some roots end in "m" but become "n" when syllable-final.
+
+The rules used, in prose and in order, are:
+
+*** Syllable-final m
+
+m becomes n when syllable final.
+
+**** Example:
+
+laam becomes laan, laam^ta becomes laanta.
+
+*** Deletion of t
+
+t gets deleted when preceded by d, ɖ (applies to suffix -ta).
+
+**** Example:
+
+kefed^ta becomes kefeda.
+
+*** Spirantization
+
+g, b, d, ɖ become ɣ, β, ð, ʐ respectively when preceded by a vowel and succeeded by -o.
+
+**** Example
+
+kefed^o becomes kefeðo.
+
+*** Vowel deletion in VCVC
+
+When we have the pattern VCVC^o, or VCVC^aj, we delete the second vowel. Either consonant must be a fricative. Note how this rule is applied after Spirantization.
+
+**** Example
+
+baɣal^o becomes baɣl^o.
+
+*** De-spirantization of syllable-final fricative
+
+When an unvoiced fricative is syllable-final (we consider it syllable-final if it precedes a consonant or nothing), it gets de-spirantized. Note how this rule is applied after Vowel deletion in VCVC.
+x
+**** Example
+
+baɣl^o becomes baglo.
+
+* Underlying forms
+** Suffixes
+
+*** Nouns
+
+|---------+-----|
+| +Sg     | -∅  |
+| +Sg.Def | -ta |
+| +Pl     | -o  |
+|---------+-----|
+
+*** Verbs
+
+|-----------+------|
+| +3Sg.Masc | -aj  |
+| +3Sg.Fem  | -taj |
+| +1Pl.Past | -naj |
+|-----------+------|
+
+** Roots
+
+*** Nouns
+
+Jid
+Jilin
+bad
+baɣal
+bil
+bohol
+daan
+daar
+dan
+feeɖ
+gaʕam
+gaβaɖ
+gees
+hoɣol
+irbad
+jirid
+kaliil
+kefed
+laam
+laf
+lug
+meel
+naag
+najl
+nirig
+saan
+sab
+sim
+sum
+tib
+waHar
+ʔaajad
+ʔinan
+ʔul
+ʕiir
+
+*** Verbs
+
+sug
+kab
+sid
+dil
+gan
+tum
+arag
+guðub
+qosol
+haðal
+
+** Words
+
++N+bad+Sg
++N+bad+Sg.Def
++N+bad+Pl
++N+baɣal+Pl
++N+baɣal+Sg
++N+baɣal+Sg.Def
++N+bil+Sg
++N+bil+Pl
++N+bil+Sg.Def
++N+bohol+Sg
++N+bohol+Pl
++N+bohol+Sg.Def
++N+daan+Sg
++N+daan+Pl
++N+daan+Sg.Def
++N+daar+Sg
++N+daar+Pl
++N+daar+Sg.Def
++N+dan+Sg
++N+dan+Pl
++N+dan+Sg.Def
++N+Jid+Sg
++N+Jid+Sg.Def
++N+Jid+Pl
++N+Jilin+Sg
++N+Jilin+Pl
++N+Jilin+Sg.Def
++N+feeɖ+Sg
++N+feeɖ+Sg.Def
++N+feeɖ+Pl
++N+gaʕam+Sg
++N+gaʕam+Sg.Def
++N+gaʕam+Pl
++N+gaβaɖ+Sg
++N+gaβaɖ+Sg.Def
++N+gaβaɖ+Pl
++N+gees+Sg
++N+gees+Pl
++N+gees+Sg.Def
++N+hoɣol+Sg
++N+hoɣol+Pl
++N+hoɣol+Sg.Def
++N+irbad+Sg
++N+irbad+Sg.Def
++N+irbad+Pl
++N+jirid+Pl
++N+jirid+Sg
++N+jirid+Sg.Def
++N+kaliil+Sg
++N+kaliil+Pl
++N+kaliil+Sg.Def
++N+kefed+Sg
++N+kefed+Sg.Def
++N+kefed+Pl
++N+laam+Pl
++N+laam+Sg
++N+laam+Sg.Def
++N+laf+Sg
++N+laf+Pl
++N+laf+Sg.Def
++N+lug+Sg
++N+lug+Pl
++N+lug+Sg.Def
++N+meel+Sg
++N+meel+Pl
++N+meel+Sg.Def
++N+naag+Sg
++N+naag+Pl
++N+naag+Sg.Def
++N+najl+Sg
++N+najl+Pl
++N+najl+Sg.Def
++N+nirig+Pl
++N+nirig+Sg
++N+nirig+Sg.Def
++N+saan+Sg
++N+saan+Pl
++N+saan+Sg.Def
++N+sab+Sg
++N+sab+Pl
++N+sab+Sg.Def
++N+sim+Sg
++N+sim+Pl
++N+sim+Sg.Def
++N+sum+Sg
++N+sum+Pl
++N+sum+Sg.Def
++N+tib+Sg
++N+tib+Pl
++N+tib+Sg.Def
++N+waHar+Sg
++N+waHar+Pl
++N+waHar+Sg.Def
++N+ʔaajad+Sg
++N+ʔaajad+Sg.Def
++N+ʔaajad+Pl
++N+ʔinan+Sg
++N+ʔinan+Pl
++N+ʔinan+Sg.Def
++N+ʔul+Sg
++N+ʔul+Pl
++N+ʔul+Sg.Def
++N+ʕiir+Sg
++N+ʕiir+Pl
++N+ʕiir+Sg.Def
++V+arag+1Pl.Past
++V+arag+3Sg.Fem
++V+arag+3Sg.Masc
++V+dil+3Sg.Masc
++V+dil+1Pl.Past
++V+dil+3Sg.Fem
++V+gan+3Sg.Masc
++V+gan+1Pl.Past
++V+gan+3Sg.Fem
++V+guðub+3Sg.Masc
++V+guðub+1Pl.Past
++V+guðub+3Sg.Fem
++V+haðal+1Pl.Past
++V+haðal+3Sg.Fem
++V+haðal+3Sg.Masc
++V+kab+1Pl.Past
++V+kab+3Sg.Fem
++V+kab+3Sg.Masc
++V+qosol+3Sg.Masc
++V+qosol+1Pl.Past
++V+qosol+3Sg.Fem
++V+sid+3Sg.Masc
++V+sid+3Sg.Fem
++V+sid+1Pl.Past
++V+sid+1Pl.Past
++V+sug+1Pl.Past
++V+sug+3Sg.Fem
++V+sug+3Sg.Masc
++V+tum+3Sg.Masc
++V+tun+1Pl.Past
++V+tun+3Sg.Fem
+
+* Conclusion
+
+We have made a `.lexc` file that generates the vocabulary and a `.xfst` file that applies morphophonological rules to the given data.
+
+*** TODO Issues
+
+The `.xfst` is mostly correct but makes some mistakes. 2 words out of 135 are wrong.
+
+- jirdo
+- nirgo
+
+It is because of the VCVC vowel deletion rule and the spirantization rule.

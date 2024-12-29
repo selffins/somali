@@ -1,0 +1,17 @@
+define Vowel      [ a | e | i | o | u ]    ;
+define Consonant  [ b | d | f | g | h | j | k | l | m | n | r | s | t | w | ð | ɖ | ɣ | ʃ | ʐ | ʔ | ʕ | β | ʒ ]  ;
+define Fricative  [ β | ʒ |  ð | ʃ | ɣ | ʕ]  ;
+
+define EndM   m -> n || _ .#.  ;
+define SyllableFinalM  m -> n || _ Consonant;
+define EndFricative β -> b, ð -> d, ɣ -> g || _ .#.;
+define SyllableFinalFricative β -> b, ð -> d, ɣ -> g || _ .#.;
+
+define Cleanup   "^"          -> 0            || _     ;
+
+read lexc < somali.lexc
+define Root;
+read regex Root .o. Cleanup .o. EndM .o. SyllableFinalM .o. EndFricative .o. SyllableFinalFricative;
+define Root;
+regex Root;
+apply up < surface.txt > analyzed.txt

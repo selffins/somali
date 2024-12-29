@@ -1,0 +1,31 @@
+Multichar_Symbols
++N
++Sg
++Sg.Def
++Pl
++3Sg.Masc
++3Sg.Fem
++1Pl.Past
+
+LEXICON Root
+Verb    ;
+
+LEXICON Verb
++V+:0    VStem    ;
+
+LEXICON VStem
+sug     VSuffix;
+kab     VSuffix;
+sid     VSuffix;
+dil     VSuffix;
+gan     VSuffix;
+tun     VSuffix;
+arag    VSuffix;
+guðub   VSuffix;
+qosol   VSuffix;
+haðal   VSuffix;
+
+LEXICON VSuffix
++3Sg.Masc:^aj    #;
++3Sg.Fem:^taj    #;
++1Pl.Past:^naj   #;

@@ -1,0 +1,77 @@
+Multichar_Symbols
++N
++Sg
++Sg.Def
++Pl
++3Sg.Masc
++3Sg.Fem
++1Pl.Past
+
+LEXICON Root
+Noun    ;
+Verb    ;
+
+LEXICON Noun
++N+:0   NStem;
+
+LEXICON NStem
+daar	NSuffix	;
+gees	NSuffix	;
+laf	    NSuffix	;
+lug     NSuffix	;
+naag	NSuffix	;
+tib	    NSuffix	;
+sab	    NSuffix	;
+bad	    NSuffix	;
+Jid    NSuffix	;
+feeɖ	NSuffix	;
+ʕiir	NSuffix	;
+ʔul	    NSuffix	;
+bil	    NSuffix	;
+meel	NSuffix	;
+najl	NSuffix	;
+sum	    NSuffix	;
+laam	NSuffix	;
+sim	    NSuffix	;
+dan	    NSuffix	;
+daan	NSuffix	;
+saan	NSuffix	;
+nirig	NSuffix	;
+gaβaɖ	NSuffix	;
+hoɣol	NSuffix	;
+baɣal	NSuffix	;
+waHar   NSuffix	;
+irbad	NSuffix	;
+kefed	NSuffix	;
+Jilin   NSuffix	;
+bohol	NSuffix	;
+jirid	NSuffix	;
+ʔaajad	NSuffix	;
+kaliil  NSuffix;
+gaʕam	NSuffix	;
+ʔinan	NSuffix	;
+
+LEXICON NSuffix
++Sg:^       #   ;
++Sg.Def:^ta #   ;
++Pl:^o      #   ;
+
+LEXICON Verb
++V+:0    VStem    ;
+
+LEXICON VStem
+sug     VSuffix;
+kab     VSuffix;
+sid     VSuffix;
+dil     VSuffix;
+gan     VSuffix;
+tum     VSuffix;
+arag    VSuffix;
+guðub   VSuffix;
+qosol   VSuffix;
+haðal   VSuffix;
+
+LEXICON VSuffix
++3Sg.Masc:^aj    #;
++3Sg.Fem:^taj    #;
++1Pl.Past:^naj   #;
